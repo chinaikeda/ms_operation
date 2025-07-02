@@ -30,7 +30,7 @@ spring:
 ikeda:
   api:
     url:
-      authuser: 'http://localhost:8087/ikeda-authuser'
+      authuser: 'http://ikeda-authuser-ms/ikeda-authuser'
   broker:
     exchange:
       userEventExchange: ikeda.userevent
