@@ -21,7 +21,7 @@ public class UserModel extends RepresentationModel<UserModel> implements Seriali
     private UUID userId;
 
     @Column(nullable = false, unique = true, length = 50)
-    private String login;
+    private String username;
 
     @Column(nullable = false, unique = true, length = 50)
     private String email;
@@ -52,12 +52,12 @@ public class UserModel extends RepresentationModel<UserModel> implements Seriali
         this.userId = userId;
     }
 
-    public String getLogin() {
-        return login;
+    public String getUsername() {
+        return username;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getEmail() {

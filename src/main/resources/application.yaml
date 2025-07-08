@@ -7,3 +7,5 @@ spring:
     config:
       discovery:
         serviceId: ikeda-operational-ms
+      username: configserver
+      password: '123456GHJKLMN'

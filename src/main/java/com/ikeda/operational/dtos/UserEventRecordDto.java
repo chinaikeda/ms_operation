@@ -6,7 +6,7 @@ import org.springframework.beans.BeanUtils;
 import java.util.UUID;
 
 public record UserEventRecordDto(UUID userId,
-                                 String login,
+                                 String username,
                                  String email,
                                  String name,
                                  String userStatus,
