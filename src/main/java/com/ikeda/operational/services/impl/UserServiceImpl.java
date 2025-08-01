@@ -42,11 +42,13 @@ public class UserServiceImpl implements UserService {
     @Transactional
     @Override
     public void delete(UUID userId) {
+        logger.info(String.format("ms_operational - User delete userId {%s} - ", userId));
         userRepository.deleteById(userId);
     }
 
     @Override
     public UserModel save(UserModel userModel) {
+        logger.info(String.format("ms_operational - User save userId {%s} - ", userModel.getUserId()));
         userRepository.save(userModel);
 
 //        TODO - AI - Somente teste, não tem necessidade
