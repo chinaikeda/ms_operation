@@ -51,17 +51,17 @@ public class UserServiceImpl implements UserService {
         logger.info(String.format("ms_operational - User save userId {%s} - ", userModel.getUserId()));
         userRepository.save(userModel);
 
-//        TODO - AI - Somente teste, não tem necessidade
-        try {
-            var notificationRecordCommandDto = new NotificationRecordCommandDto(
-                    "Bem vindo!!!",
-                    userModel.getName() + " seu registro foi replicado com sucesso!",
-                    userModel.getUserId());
-
-            notificationCommandPublisher.publishNotificationCommand(notificationRecordCommandDto);
-        } catch (Exception e){
-            logger.error("Error sending notification!");
-        }
+//        TODO - AI - Somente teste para deixar pronto, pois neste MS haverá notificação
+//        try {
+//            var notificationRecordCommandDto = new NotificationRecordCommandDto(
+//                    "InclusãoBem vindo!!!",
+//                    userModel.getName() + " seu registro foi replicado com sucesso!",
+//                    userModel.getUserId());
+//
+//            notificationCommandPublisher.publishNotificationCommand(notificationRecordCommandDto);
+//        } catch (Exception e){
+//            logger.error("Error sending notification!");
+//        }
 
         return userModel;
     }
